@@ -1,0 +1,39 @@
+Template 1: Product Search & Upsell
+userinput: "hii, i would like a powerbank and my budget is 1000rs"
+taskslist: [
+  {
+    "taskDescription": "Search the catalog for powerbanks under 1000rs",
+    "targetAgent": "catalogAgent"
+  },
+  {
+    "taskDescription": "Search the catalog for premium powerbank alternatives between 1000rs and 1500rs for upsell",
+    "targetAgent": "catalogAgent"
+  }
+]
+
+Template 2: First-Time Intent to Buy (Must Fetch Addons First)
+userinput: "so i want 1299 rs powerbank which u told and i want 10 pieces can i get them?"
+taskslist: [
+  {
+    "taskDescription": "Fetch addons for the 1299 rs powerbank so they can be pitched to the user.",
+    "targetAgent": "catalogAgent"
+  }
+]
+
+Template 3: Responding to Addon Pitch (Proceeding to Order)
+userinput: "yes do it"
+taskslist: [
+  {
+    "taskDescription": "Process the order for 10 units of the 1299 rs powerbank and include the selected addons.",
+    "targetAgent": "orderAgent"
+  }
+]
+
+Template 4: Providing Profile Details for an Ongoing Order
+userinput: "parthgupta20052005@gmail.com"
+taskslist: [
+  {
+    "taskDescription": "Update and process the existing order with the provided email address parthgupta20052005@gmail.com",
+    "targetAgent": "orderAgent"
+  }
+]

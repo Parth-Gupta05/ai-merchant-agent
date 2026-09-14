@@ -1,0 +1,12 @@
+Catalog Agent:
+- SEARCH: Takes a semantic search term and optional constraints (minPrice, maxPrice, category); returns a list of matching products with their names, prices, and stock status.
+- GET_DETAILS: Takes an array of exact product IDs; returns detailed product information.
+- COMPARE: Takes an array of at least two product IDs; returns the detailed products along with an AI-generated comparison summary.
+- CHECK_AVAILABILITY: Takes an array of exact product IDs; returns the products with their current available stock quantities.
+- GET_ADDONS: Takes an array of product IDs (or a fallback search query); returns a list of related cross-sell addons (with name, price, description) available for those products.
+
+Recommendation Agent:
+- GET_RECOMMENDATIONS: Takes the name of a product the user liked, their specific preferences, and a raw list of available products; returns a filtered list of recommended alternative products with an explanation of why they were recommended.
+
+Order Agent:
+- PROCESS_ORDER: Takes an array of items (product IDs/addon IDs and quantities) and known user profile data (email, name, phone, address); returns the current order status (MISSING_EMAIL, MISSING_PROFILE, or CREATED), identifying any missing fields that must be collected before the order is saved in the database.
